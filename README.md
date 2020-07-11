@@ -35,7 +35,7 @@ Collapsible Flight Options
 <img src= "./assets/images/flight-options.png">
 
 ## Deployed Website
-https://d-belleza.github.io/covid-traveling/
+https://sylviaprabudy.github.io/covid-traveling/
 
 ## GitHub Link
-https://github.com/d-belleza/covid-traveling.git
+https://github.com/sylviaprabudy/covid-traveling.git
