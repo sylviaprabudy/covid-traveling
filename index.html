@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>COVID-19 Travel Tracker</title>
+</head>
+
+<body>
+    <!--Intro Modal-->
+    <div id="modal" class="modal modal-welcome">
+        <div class="modal-content">
+            <h4>Welcome to COVID-19 Travel Tracker!</h4>
+            <p>Please note: If you have experienced any of the below symptoms, or have been exposed to someone who has
+                tested positive for COVID-19, the CDC recommends staying home for 14 days. Please reconsider traveling
+                during this time. </p>
+            <p class="strong">
+                Fever or chills, coughing, shortness of breath or difficulty breathing, fatique
+            </p>
+            <p>If you believe you may have been exposed to COVID-19, please contact your healthcare provider.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-light btn">I understand</a>
+        </div>
+    </div>
+
+    <!--Header/Navbar-->
+    <nav class="top-nav">
+        <div class="nav-wrapper blue3">
+            <h1><a href="./index.html" class="brand-logo center">COVID-19 Travel Tracker</a></h1>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/images/covidtracker-herobanner.jpg"></div>
+        </div>
+        <div class="section">
+            <div class="row">
+
+                <!-- Airport Code Search Bar -->
+                <div class="col s12 l3" id="airport-code-search">
+
+                    <div class="input-field col s12">
+                        <h6>Search for Airport Codes</h6>
+                        <div id="airport-code">
+                            <label for="airport-search">Search Term:</label>
+                            <input placeholder="Country or City name" id="airport-search" type="text" class="validate">
+                        </div>
+                    </div>
+                    <a id="airport-search-btn"
+                        class="submit-button waves-effect waves-light blue4 btn-large col s12">Submit<i
+                            class="material-icons right">send</i></a>
+                </div>
+
+                <!-- Airport Code Display -->
+                <div id=airport-code-section class="hide col s12 l9">
+                    <div class="col s12 right" id="airport-codes">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">Airport Options</span>
+                                <p>The following airports match your search:</p>
+                            </div>
+                            <div id="airport-options">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section main-section">
+            <div class="row">
+                <div class="col s12 l3" id="search-bar">
+
+                    <div class="input-field col s12">
+                        <h6>Search round-trip flights by airport codes</h6>
+                        <div id="from-city">
+                            <label for="from-city">From:</label>
+                            <input placeholder="Airport Code" id="from-city" type="text" class="validate from-city">
+                        </div>
+
+                        <div id="to-city">
+                            <label for="to-city">To:</label>
+                            <input placeholder="Airport Code" id="to-city" type="text" class="validate to-city">
+                        </div>
+                        <div>
+                            <label for="outbound-date">Outbound:</label>
+                            <input type="text" id="outbound-date" placeholder="YYYY-MM-DD" class="datepicker col s12">
+                        </div>
+                        <div>
+                            <label for="inbound-date">Inbound:</label>
+                            <input type="text" id="inbound-date" placeholder="YYYY-MM-DD" class="datepicker col s12">
+                        </div>
+                        <a id="submit-btn"
+                            class="submit-button waves-effect waves-light blue4 btn-large col s12">Submit<i
+                                class="material-icons right">send</i></a>
+
+
+                    </div>
+                    <!-- Saved Trips -->
+                    <div class="col s12" id="saved-trips">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <h5>Saved Trips<i class="material-icons right">arrow_drop_down</i></h5>
+                                </div>
+                                <div class="saved-trips-list collapsible-body">
+                                </div>
+                            </li>
+                            <li class="delete-saved-trips">
+                                <a id="clear-trips-btn" class="btn-floating blue3"><i
+                                            class="material-icons">delete</i></a> Clear Saved Trips
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Cards -->
+                <div id="main-cards" class="hide col s12 l9">
+                    <div class="col s12">
+                        <div class="card blue1" id="covid-data">
+                        </div>
+                    </div>
+                    <div class="col s12 right" id="flight-routes">
+                        <div class="card">
+                            <div class="card-content" id="flight-card-content">
+                                <h5 class="card-title" id="flight-cities"></h5>
+                                <h6 class="card-title flow-text" id="flight-dates"></h6>
+                                <hr>
+                                <span class="card-title">Flight Options <i
+                                    class="material-icons">airplanemode_active</i></span>
+                                <p>Select an airline to view the following flight price options</p>
+                            </div>
+                            <ul class="collapsible" id="flight-options">
+                            </ul>
+
+
+                            <div class="card-action">
+                                <p><a id="add-trip-btn" class="btn-floating blue3"><i class="material-icons">add</i></a>
+                                    Add to Saved Trips</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="assets/images/corona-virus.jpg"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer blue3">
+        <div class="footer-copyright">
+            <div class="container white-text">
+
+                <p>
+                    <span>&copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        Copyright - All rights reserved
+                    </span>
+                    <span class="footer-links">Data from following sources:
+                        <a href="https://traveladviceapi.com/" target="_blank">TravelAdvice</a> |
+                        <a href="https://rapidapi.com/apidojo/api/tripadvisor1" target="_blank">TripAdvisor</a> |
+                        <a href="https://rapidapi.com/user/skyscanner" target="_blank">SkyScanner</a>
+                    </span>
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

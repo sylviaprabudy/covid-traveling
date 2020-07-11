@@ -1,0 +1,211 @@
+/***** CSS Overwrite *****/
+
+/* Default styling */
+html {
+  font-family: "Roboto", sans-serif;
+}
+.parallax-container {
+    height: 250px;
+  }
+
+p {
+  line-height: 25px;
+}
+
+hr {
+  border: 1px solid var(--blue3);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+/* Color palette */
+:root {
+  /* --blue0: rgba(78, 141, 166, 0.3); */
+  --blue1: #4e8da6;
+  --blue2: #b4ced9;
+  --blue3: #163840;
+  --blue4: #6bb0bf;
+  --red: #f21905;
+}
+
+.blue0 {
+  background-color: var(--blue0);
+}
+
+.blue1 {
+  background-color: var(--blue1);
+}
+
+.blue2 {
+  background-color: var(--blue2);
+}
+
+.blue3 {
+  background-color: var(--blue3);
+}
+
+.blue4 {
+  background-color: var(--blue4);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.strong {
+  font-weight: bold;
+}
+
+a {
+  color: var(--blue2);
+}
+
+a:hover {
+  color: white;
+}
+
+.main-section {
+  padding-bottom: 0;
+}
+
+/* Brand Logo */
+nav .brand-logo {
+  position: relative;
+}
+
+nav .nav-wrapper {
+  height: auto;
+}
+
+/* Parallax  */
+.parallax-container {
+  height: 350px;
+}
+
+/* Modal welcome */
+#modal.modal {
+  padding: 25px;
+  border-radius: 0.3rem;
+}
+#modal .modal-content {
+  padding: 20px;
+  border: 1px solid var(--red);
+  border-radius: 0.3rem;
+}
+
+/* Input fields */
+input:focus,
+input:active,
+input:visited,
+input[type="text"].valid {
+  border-bottom: 1px solid var(--blue3) !important;
+  -webkit-box-shadow: 0 1px 0 0 var(--blue3) !important;
+  box-shadow: 0 1px 0 0 var(--blue3) !important;
+}
+
+/* Buttons */
+.btn,
+.btn-floating {
+  background-color: var(--blue4);
+}
+
+.btn:hover,
+.btn-floating:hover {
+  background-color: var(--blue1);
+}
+
+.btn-flat {
+  color: var(--blue3);
+}
+
+.submit-button:hover {
+  background-color: var(--blue1);
+}
+
+/* Date picker */
+.datepicker-date-display,
+.datepicker-table td.is-selected {
+  background-color: var(--blue2);
+}
+
+.datepicker-table td.is-today {
+  color: var(--blue2);
+}
+
+/* Covid Data */
+#covid-data a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Saved Trips */
+
+.saved-trips-list a {
+  color: var(--blue3);
+  text-transform: uppercase;
+}
+
+.saved-trips-list a:hover {
+  color: var(--blue1);
+}
+.saved-trips-list li {
+  margin-bottom: 10px;
+}
+
+.delete-saved-trips {
+  padding: 15px;
+}
+
+/* Flight options */
+
+/* Footer */
+.page-footer {
+  padding-top: 0;
+}
+
+.footer-links {
+  float: right;
+}
+/* Error Handling - Toast */
+
+.toast {
+  background-color: var(--red);
+}
+
+/*** MEDIA QUERY FOR MOBILE PHONES AND SMALLER ***/
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .parallax-container {
+    height: 300px;
+  }
+
+  .modal-content h4 {
+    font-size: 1.6rem;
+  }
+  .modal-content p {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
