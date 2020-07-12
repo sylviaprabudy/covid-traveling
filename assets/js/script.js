@@ -60,7 +60,7 @@ $("#airport-search-btn").on("click", function (event) {
 var getAirportOptions = function (airportCodeSearch) {
 
     var myHeaders = new Headers();
-    myHeaders.append("x-rapidapi-key", "84e88edf43msh8f94761f7dfb087p1e1596jsn0ddf7fe493e7");
+    myHeaders.append("x-rapidapi-key", "69f0fc9e9cmsh8a73231b70d1caep1270a7jsnd11560f94399");
 
     var requestOptions = {
         method: 'GET',
@@ -229,7 +229,7 @@ function addCountryData(data) {
 // fetch call for flight options
 var getTravelQuotes = function () {
     var myHeaders = new Headers();
-    myHeaders.append("x-rapidapi-key", "84e88edf43msh8f94761f7dfb087p1e1596jsn0ddf7fe493e7");
+    myHeaders.append("x-rapidapi-key", "69f0fc9e9cmsh8a73231b70d1caep1270a7jsnd11560f94399");
 
     var requestOptions = {
         method: 'GET',
