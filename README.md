@@ -1,5 +1,6 @@
 # COVID Travel Tracker
 
+
 ## Purpose
 Because of quarantine, many people have a strong desire to travel, but they also want to be safe when traveling. By creating this application, we are providing our users with the knowledge of both the COVID statistics surrounding their destination and flight options all in one place. 
 
@@ -20,6 +21,7 @@ The user can easily save their searched trip to the page. Using Local Storage, t
 	- TravelAdvice: https://traveladviceapi.com/
 	- Trip Advisor: https://rapidapi.com/apidojo/api/tripadvisor1
 	- Sky Scanner: https://rapidapi.com/user/skyscanner
+
 
 ## Screenshots of Application
 Full Screen
